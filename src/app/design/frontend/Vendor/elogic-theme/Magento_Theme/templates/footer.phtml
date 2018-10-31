@@ -1,0 +1,43 @@
+<div class="footer-adress-wrapper">
+    <h2>Contactgegevens</h2>
+    <div class="block-resizer">
+        <p>PortofoonWEB
+            Zonnedauw 16
+            9202 PA Drachten
+        </p>
+        <a href="tel:0512745293" class="footer-phone">0512 - 745 293</a>
+        <a href="mailto:info@portofoonweb.nl" class="footer-mail">info@portofoonweb.nl</a>
+        <ul>
+            <li>K.v.K nr: 62061712</li>
+            <li>BTW nr: NL854624624B01</li>
+        </ul>
+    </div>
+</div>
+<div class="footer-customer-service">
+    <h2>KLANTENSERVICE</h2>
+    <ul class="footer links">
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Over PortofoonWEB</a></li>
+        <li><a href="#">Offerte aanvraag</a></li>
+        <li><a href="#">Defect en Retour</a></li>
+        <li><a href="#">Garantie</a></li>
+        <li><a href="#">Veelgestelde vragen</a></li>
+        <li><a href="#">B2B</a></li>
+    </ul>
+</div>
+<div class="footer-links-wrapper">
+    <h2>ALGEMENE INFORMATIE</h2>
+    <?php echo $block->getChildHtml('footer_links') ?>
+</div>
+<div class="footer-newsletter-wrapper">
+    <h2>NIEUWSBRIEF</h2>
+    <p>Wilt u op de hoogte gehouden worden van de nieuwste Technieken & Aanbiedingen op het gebied van Portofoons?</p>
+    <?php echo $block->getChildHtml('subscribe') ?>
+    <div class="footer-links">
+        <ul>
+            <li><a href="#"><img src='<?php echo $this->getViewFileUrl('images/footer-twit.png'); ?>' alt="partner"></a> </li>
+            <li><a href="#"><img src='<?php echo $this->getViewFileUrl('images/footer-twit.png'); ?>' alt="partner"></a> </li>
+            <li><a href="#"><img src='<?php echo $this->getViewFileUrl('images/footer-fb.png'); ?>' alt="partner"></a> </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="top.links" >
+            <block class="Magento\Framework\View\Element\Html\Link" name="cart-link" after="authorization-link" >
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Winkelwagen</argument>
+                    <argument name="path" xsi:type="string">checkout/cart</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="register-link" display="false" />           <!--for Create Account Link-->
+        <referenceBlock name="authorization-link" />      <!--for Sign In Link  -->
+        <referenceBlock name="wish-list-link" remove="true" />          <!--for WishList Link-->
+        <referenceBlock name="my-account-link" remove="true" />          <!--for WishList Link-->
+        <!--for My Account Link-->
+        <referenceBlock name="header" remove="true"/>      <!--for My Account Link-->
+        <move element="minicart" destination="header.panel" />
+
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">300</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="header-wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="phones-daily-routine" template="Magento_Theme::header-phones-routine.phtml" after="top.search" />
+        </referenceBlock>
+        <referenceBlock name="catalog.compare.sidebar" remove="true" />
+        <referenceBlock name="wishlist_sidebar" remove="true" />
+
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Html\Link" name="privacy-policy-link">
+                <arguments>
+                    <argument name="label" xsi:type="string">Portofoons</argument>
+                    <argument name="path" xsi:type="string">contact</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="search-term-popular-link">
+                <arguments>
+                    <argument name="label" xsi:type="string">Toepassingen</argument>
+                    <argument name="path" xsi:type="string">link</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="contact-us-link">
+                <arguments>
+                    <argument name="label" xsi:type="string">Algemene voorwaarden</argument>
+                    <argument name="path" xsi:type="string">link</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="catalog-search-advanced-link">
+                <arguments>
+                    <argument name="label" xsi:type="string">Betalen en Verzenden</argument>
+                    <argument name="path" xsi:type="string">link</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="sales-guest-form-link">
+                <arguments>
+                    <argument name="label" xsi:type="string">Privacy en Cookies</argument>
+                    <argument name="path" xsi:type="string">link</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="faq">
+                <arguments>
+                    <argument name="label" xsi:type="string">Disclaimer</argument>
+                    <argument name="path" xsi:type="string">link</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="elogic-footer" template="Magento_Theme::footer.phtml" before="-"/>
+        </referenceContainer>
+        <referenceBlock name="report.bugs" remove="true"/>
+        <move element="footer_links" destination="elogic-footer" />
+        <move element="copyright" destination="before.body.end" />
+        <move element="form.subscribe" destination="elogic-footer" />
+    </body>
+</page>

@@ -1,4 +1,55 @@
-<h2>HelloWorld</h2>
 
-<p>Congratulations ! You have created your first Magento Module !</p>
-<p>The block classname is : <?php echo get_class($block) ?></p>
+<div class="container">
+    <h1>Bedankt voor uw bestelling bij PortofoonWEB!</h1>
+    <div class="list-text-wrapper">
+        <ul>
+            <li>
+                <h2>Goed om te weten</h2>
+                <p>
+                    Bent u tevreden over het bestelproces like dan onze Facebook pagina of
+                    laat een review achter, zo maakt u ook nog eens kans op een leuke cadeau
+                    bon ter waarde van € 100,- Wilt u graag op de hoogte blijven van het laatste
+                    nieuws en speciale aanbiedingen meld u zich dan aan op onze nieuwsbrief.
+                </p>
+            </li>
+            <li>
+                <h2>Wat gaat er nu gebeuren?</h2>
+                <p>
+                    Per email heeft u een bevestiging ontvangen van uw bestelling met
+                    Ordernummer [ordernummer]. Heeft u de bestelling op een werkdag voor
+                    17:00 gedaan en betaald, dan gaan wij nu direct aan de slag om te zorgen
+                    dat u het morgen in huis heeft. Heeft u vragen over de bestelling neem dan
+                    contact met ons op 0512 – 745293 of stuur ons een email aan
+                    info@portofoonweb.nl.
+                </p>
+            </li>
+            <li>
+                <h2>Wist u dat?</h2>
+                <p>PortofoonWEB heeft sinds kort een fenomenaal nieuwe techniek genaamd
+                    Smart Portofoons. Een portofoon systeem met ongekende mogelijkheden en
+                    onbeperkt bereik! Klik op deze link voor meer informatie.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="images-list">
+        <ul>
+            <li><a href="#"><img src='<?php echo $this->getViewFileUrl('images/social-porto.png'); ?>' alt="social"></a></li>
+            <li><a href="#"><img src='<?php echo $this->getViewFileUrl('images/social-fb.png'); ?>' alt="social"></a></li>
+            <li><a href="#"><img src='<?php echo $this->getViewFileUrl('images/social-twiter.png'); ?>' alt="social"></a></li>
+        </ul>
+    </div>
+    <div class="slider-wrapper">
+        <ul class="slider" data-mage-init='{"js/script": {"autoplay":"true"} }'>
+            <?php
+                for ($i = 1; $i <= 6; $i++):?>
+            <?php $photo = $this->getViewFileUrl('images/slide-'.$i.".png");?>
+                <?php echo "<li><div class='aligin-center'><img src='$photo' alt='partner'></div></li>";?>
+            <?php endfor;?>
+
+
+        </ul>
+    </div>
+
+</div>
+
